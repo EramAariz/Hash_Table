@@ -1,0 +1,14 @@
+num1 = [1,3]
+num2 = [2]
+num = num1 + num2
+l = len(num)
+for i in range(l):
+  for j in range(i):
+    if num[i] < num[j]:
+      temp = num[i]
+      num[i] = num[j]
+      num[j] = temp
+if l % 2 == 1:
+  print(num[l//2])
+else:
+  print((num[l/2] + num[l/2 - 1])/2)
